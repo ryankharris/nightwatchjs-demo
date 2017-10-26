@@ -1,0 +1,22 @@
+{
+  "name": "nightwatchjs-demo",
+  "version": "0.1.0",
+  "description": "Exploring nightwatch.js",
+  "main": "",
+  "scripts": {
+    "build": "npm run do-prettier && npm run test",
+    "do-prettier": "prettier --write ./src/* ./tests/e2e/* ./tests/int/* ./tests/unit/*",
+    "e2e": "NODE_ENV=test nightwatch -c ./config/nightwatch-e2e.json",
+    "start": "npm run test",
+    "test": "npm run unit-test && npm run e2e",
+    "unit-test": "NODE_ENV=test nightwatch -c ./config/nightwatch-unit-test.json"
+  },
+  "author": "Ryan K Harris",
+  "license": "MIT",
+  "dependencies": {
+    "nightwatch": "^0.9.16"
+  },
+  "devDependencies": {
+    "prettier": "^1.7.4"
+  }
+}

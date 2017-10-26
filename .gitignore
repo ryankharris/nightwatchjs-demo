@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+bin/geckodriver
+bin/selenium-server-standalone*
+GeckoDrivers/
+reports/**/*.xml
